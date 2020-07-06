@@ -1,0 +1,45 @@
+.books-list {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.books-container button {
+  padding: 5px 20px;
+  margin: 10px;
+  background-color: #888888;
+  border: none;
+  border-radius: 2px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.books-container input[type='text'] {
+  background: rgba(255, 255, 255, 0.3);
+  display: block;
+  margin: 20px 0;
+  padding: 7px;
+  font-size: 19px;
+  border: 1px solid #a5a5a5;
+  box-shadow: 2px 2px 3px 2px rgba(25, 25, 25, 0.03137254901960784);
+}
+
+.books-container ul {
+  list-style: none;
+  overflow-y: scroll;
+  height: 348px;
+}
+
+.books-container ul::-webkit-scrollbar {
+  width: 7px;
+}
+
+.books-container ul::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.books-container ul li {
+  margin: 10px 0;
+  padding: 5px 20px;
+}
