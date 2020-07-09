@@ -9,7 +9,7 @@ const Header = () => {
 
     return (
         <div className="header" style={{ background: theme.bg, color: theme.color }}>
-            <h1>My books</h1>
+            <h1>My book list</h1>
         </div>
     )
 }

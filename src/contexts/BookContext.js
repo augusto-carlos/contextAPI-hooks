@@ -4,7 +4,7 @@ import crypto from 'crypto';
 export const BookContext = createContext()
 
 const BookContextProvider = props => {
-    const [books, setBooks] = ([
+    const [books, setBooks] = useState([
         {
             title: 'The pilgrim',
             author: 'John Miller',

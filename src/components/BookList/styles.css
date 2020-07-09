@@ -7,15 +7,21 @@
 .books-container button {
   padding: 5px 20px;
   margin: 10px;
-  background-color: #888888;
+  background-color: #979797;
   border: none;
   border-radius: 2px;
   font-size: 20px;
   cursor: pointer;
 }
 
+.books-container form {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
 .books-container input[type='text'] {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.082);
   display: block;
   margin: 20px 0;
   padding: 7px;
@@ -28,6 +34,7 @@
   list-style: none;
   overflow-y: scroll;
   height: 348px;
+  padding: 40px;
 }
 
 .books-container ul::-webkit-scrollbar {
@@ -42,4 +49,6 @@
 .books-container ul li {
   margin: 10px 0;
   padding: 5px 20px;
+  background: rgba(255, 255, 255, 0.082);
+  border: 1px solid rgba(39, 39, 39, 0.109);
 }

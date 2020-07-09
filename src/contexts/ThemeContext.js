@@ -1,19 +1,26 @@
-import React, { createContext } from 'react';
+import React, { createContext, Component } from 'react';
+import { render } from '@testing-library/react';
 
 export const ThemeContext = createContext()
 
-const ThemeContextProvider = props => {
-    const theme = {
+class ThemeContextProvider extends Component {
+    state = {
         isLightTheme: true,
         light: { ui: '#eee', bg: '#ddd', color: '#444' },
-        dark: { ui: '#555', bg: '#444', color: '#eee' }
+        dark: { ui: '#666', bg: '#555', color: '#eee' }
     }
 
-    return (
-        <ThemeContext.Provider value={{ theme }}>
-            {props.children}
-        </ThemeContext.Provider>
-    );
+    toggleTheme = () => {
+        this.setState({ isLightTheme: !this.state.isLightTheme })
+    }
+
+    render() {
+        return (
+            <ThemeContext.Provider value={{ ...this.state, toggleTheme: this.toggleTheme }}>
+                {this.props.children}
+            </ThemeContext.Provider>
+        );
+    }
 
 }
 
